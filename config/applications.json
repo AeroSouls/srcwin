@@ -15,9 +15,9 @@
 		"winget": "AIMP.AIMP",
 		"choco": "aimp"
 	},
-	"WPFInstallmicrosoftsysinternalsautoruns": {
+	"WPFInstallmicrosoftautoruns": {
 		"winget": "Microsoft.Sysinternals.Autoruns",
-		"choco": "Microsoft-Sysinternals-Autoruns"
+		"choco": "autoruns"
 	},
 	"WPFInstallaudacity": {
 		"winget": "Audacity.Audacity",
