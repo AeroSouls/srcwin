@@ -11,17 +11,13 @@
 		"winget": "Famatech.AdvancedIPScanner",
 		"choco": "advanced-ip-scanner"
 	},
-	"WPFInstallalacritty": {
-		"Winget": "Alacritty.Alacritty",
-		"choco": "alacritty"
-	},
-	"WPFInstallanydesk": {
-		"winget": "AnyDeskSoftwareGmbH.AnyDesk",
-		"choco": "anydesk"
-	},
 	"WPFInstallaimp": {
 		"winget": "AIMP.AIMP",
 		"choco": "aimp"
+	},
+	"WPFInstallmicrosoftsysinternalsautoruns": {
+		"winget": "Microsoft.Sysinternals.Autoruns",
+		"choco": "Microsoft-Sysinternals-Autoruns"
 	},
 	"WPFInstallaudacity": {
 		"winget": "Audacity.Audacity",
