@@ -75,10 +75,6 @@
 		"winget": "DelugeTeam.Deluge",
 		"choco": "deluge"
 	},
-	"WPFInstalldiscord": {
-		"winget": "Discord.Discord",
-		"choco": "discord"
-	},
 	"WPFInstalldockerdesktop": {
 		"winget": "Docker.DockerDesktop",
 		"choco": "docker-desktop"
