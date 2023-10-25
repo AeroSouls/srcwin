@@ -3,7 +3,7 @@ Launch Command:
 ```
 iwr -useb https://itbysrc.com/win | iex
 ```
-Or shorter Thanks to [#144](/../../issues/144)
+Or 
 ```
 irm https://itbysrc.com/win | iex
 ```
