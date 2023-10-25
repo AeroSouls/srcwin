@@ -16,7 +16,7 @@ function Invoke-WPFShortcut {
             $IRM = 'irm https://itbysrc.com/win | iex'
             $Powershell = '-ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList'
             $ArgumentsToSourceExe = "$powershell '$IRM'"
-            $DestinationName = "WinUtil.lnk"
+            $DestinationName = "SRC_WinUntil.lnk"
         }
     }
 

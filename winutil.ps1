@@ -1052,7 +1052,7 @@ function Invoke-WPFButton {
     Param ([string]$Button)
 
     # Use this to get the name of the button
-    #[System.Windows.MessageBox]::Show("$Button","Chris Titus Tech's Windows Utility","OK","Info")
+    #[System.Windows.MessageBox]::Show("$Button","SRC Windows Utility","OK","Info")
 
     Switch -Wildcard ($Button){
 
@@ -1291,6 +1291,7 @@ Function Invoke-WPFFormVariables {
     Write-Host ""
     Write-Host "====S&R Computers====="
     Write-Host "=====Windows Toolbox====="
+
 
     #====DEBUG GUI Elements====
 
@@ -1622,10 +1623,10 @@ function Invoke-WPFShortcut {
     Switch ($ShortcutToAdd) {
         "WinUtil" {
             $SourceExe = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
-            $IRM = 'irm https://christitus.com/win | iex'
+            $IRM = 'irm https://itbysrc.com/win | iex'
             $Powershell = '-ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList'
             $ArgumentsToSourceExe = "$powershell '$IRM'"
-            $DestinationName = "WinUtil.lnk"
+            $DestinationName = "SRC_WinUntil.lnk"
         }
     }
 
