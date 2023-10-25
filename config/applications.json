@@ -11,34 +11,6 @@
 		"winget": "Famatech.AdvancedIPScanner",
 		"choco": "advanced-ip-scanner"
 	},
-	"WPFInstallaimp": {
-		"winget": "AIMP.AIMP",
-		"choco": "aimp"
-	},
-	"WPFInstallmicrosoftautoruns": {
-		"winget": "Microsoft.Sysinternals.Autoruns",
-		"choco": "autoruns"
-	},
-	"WPFInstallaudacity": {
-		"winget": "Audacity.Audacity",
-		"choco": "audacity"
-	},
-	"WPFInstallautohotkey": {
-		"winget": "AutoHotkey.AutoHotkey",
-		"choco": "autohotkey"
-	},
-	"WPFInstallbitwarden": {
-		"winget": "Bitwarden.Bitwarden",
-		"choco": "bitwarden"
-	},
-	"WPFInstallblender": {
-		"winget": "BlenderFoundation.Blender",
-		"choco": "blender"
-	},
-	"WPFInstallbluestacks": {
-		"winget": "BlueStack.BlueStacks",
-		"choco": "na"
-	},
 	"WPFInstallbrave": {
 		"winget": "Brave.Brave",
 		"choco": "brave"
