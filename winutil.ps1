@@ -3201,7 +3201,7 @@ $sync.configs.themes = '{
                    "ButtonInstallForegroundColor":  "#FFFFFF",
                    "ButtonBackgroundColor":  "#000000",
                    "ButtonBackgroundPressedColor":  "#FFFFFF",
-                   "ButtonBackgroundMouseoverColor":  "#A55A64",
+                   "ButtonBackgroundMouseoverColor":  "#9cc0ff",
                    "ButtonForegroundColor":  "#3f5ffc",
                    "ButtonBorderThickness":  "3",
                    "ButtonMargin":  "2",
