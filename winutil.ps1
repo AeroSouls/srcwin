@@ -1289,8 +1289,9 @@ Function Invoke-WPFFormVariables {
     Write-Host "███████║██║  ██║╚██████╗"
     Write-Host "╚══════╝╚═╝  ╚═╝ ╚═════╝"
     Write-Host ""
-    Write-Host "====S&R Computers====="
+    Write-Host "====S&R Computers Assocites INC====="
     Write-Host "=====Windows Toolbox====="
+    Write-Host "==== itbysrc.com ====="
 
 
     #====DEBUG GUI Elements====
@@ -2558,7 +2559,6 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallwingetui" Content="WingetUI" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwiztree" Content="WizTree" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwinrar" Content="WinRAR" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallzerotierone" Content="ZeroTier One" Margin="5,0"/>
                             </StackPanel>
                         </Grid>
                     </TabItem>
