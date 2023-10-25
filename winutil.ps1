@@ -2480,7 +2480,6 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallwaterfox" Content="Waterfox" Margin="5,0"/>
 
                                 <Label Content="Communications" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalldiscord" Content="Discord" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallguilded" Content="Guilded" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallhexchat" Content="Hexchat" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalljami" Content="Jami" Margin="5,0"/>
@@ -2885,10 +2884,6 @@ $sync.configs.applications = '{
 	"WPFInstalldeluge": {
 		"winget": "DelugeTeam.Deluge",
 		"choco": "deluge"
-	},
-	"WPFInstalldiscord": {
-		"winget": "Discord.Discord",
-		"choco": "discord"
 	},
 	"WPFInstalldockerdesktop": {
 		"winget": "Docker.DockerDesktop",
