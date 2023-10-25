@@ -3189,11 +3189,11 @@ $sync.configs.themes = '{
                 },
     "Matrix":  {
                    "ComboBoxBackgroundColor":  "#000000",
-                   "LabelboxForegroundColor":  "#d4d9ff",
+                   "LabelboxForegroundColor":  "#d1d1d1",
                    "MainForegroundColor":  "#3f5ffc",
                    "MainBackgroundColor":  "#000000",
                    "LabelBackgroundColor":  "#000000",
-                   "ComboBoxForegroundColor":  "#d4d9ff",
+                   "ComboBoxForegroundColor":  "#d1d1d1",
                    "ButtonInstallBackgroundColor":  "#222222",
                    "ButtonTweaksBackgroundColor":  "#333333",
                    "ButtonConfigBackgroundColor":  "#444444",
