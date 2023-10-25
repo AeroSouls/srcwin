@@ -1292,7 +1292,6 @@ Function Invoke-WPFFormVariables {
     Write-Host "====S&R Computers====="
     Write-Host "=====Windows Toolbox====="
 
-
     #====DEBUG GUI Elements====
 
     #Write-Host "Found the following interactable elements from our form" -ForegroundColor Cyan
@@ -2493,7 +2492,6 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstalljava18" Content="Oracle Java 18" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallpython3" Content="Python3" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallsublime" Content="Sublime" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallunity" Content="Unity Game Engine" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallvisualstudio" Content="Visual Studio 2022" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallvscode" Content="VS Code" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallvscodium" Content="VS Codium" Margin="5,0"/>
@@ -2531,6 +2529,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
 
                                 <Label Content="Support Tools" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalladvancedip" Content="Advanced IP Scanner" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallautorun" Content="Autoruns" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallputty" Content="Putty" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallventoy" Content="Ventoy" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwinscp" Content="WinSCP" Margin="5,0"/>
@@ -3030,6 +3029,10 @@ $sync.configs.applications = '{
 	"WPFInstallwiztree": {
 		"Winget": "AntibodySoftware.WizTree",
 		"choco": "wiztree"
+	},
+	"WPFInstallautorun": {
+		"Winget": "Microsoft.Sysinternals.Autoruns",
+		"choco": "na"
 	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",

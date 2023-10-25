@@ -307,6 +307,10 @@
 		"Winget": "AntibodySoftware.WizTree",
 		"choco": "wiztree"
 	},
+	"WPFInstallautorun": {
+		"Winget": "Microsoft.Sysinternals.Autoruns",
+		"choco": "na"
+	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"
