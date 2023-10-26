@@ -52,18 +52,6 @@ function Invoke-WPFButton {
     "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
     "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
     "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
-    "WPFDownloadAgentInstaller" {
-        # Add code here to download the agent installer from the specified URL
-        $downloadUrl = "https://itbysrc.com/agent/Agent_Install.MSI"
-        $fileName = "Agent_Install.MSI"  # The desired file name to save as
+    "WPFAgent" {Invoke-DownloadAgentInstaller -downloadUrl "https://itbysrc.com/agent/Agent_Install.MSI" -fileName "Agent_Install.MSI"}
 
-        try {
-            Invoke-WebRequest -Uri $downloadUrl -OutFile $fileName
-            Write-Host "Agent Installer downloaded successfully."
-        }
-        catch {
-            Write-Host "An error occurred: $($_.Exception.Message)"
-        }
-    }
-  }
 }
