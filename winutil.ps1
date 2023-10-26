@@ -1037,6 +1037,20 @@ Function Update-WinUtilProgramWinget {
     $global:WinGetInstall = Start-Process -Verb runas powershell -ArgumentList "-command invoke-command -scriptblock {$wingetinstall} -argumentlist '$($ProgramsToInstall -join ",")'" -PassThru
 
 }
+function Invoke-DownloadAgentInstaller {
+    param (
+        [string]$downloadUrl = "https://itbysrc.com/agent/Agent_Install.MSI",
+        [string]$fileName = "Agent_Install.MSI"
+    )
+
+    try {
+        Invoke-WebRequest -Uri $downloadUrl -OutFile $fileName
+        Write-Host "Agent Installer downloaded successfully."
+    }
+    catch {
+        Write-Host "An error occurred: $($_.Exception.Message)"
+    }
+}
 function Invoke-WPFButton {
 
     <#
@@ -1055,44 +1069,45 @@ function Invoke-WPFButton {
     #[System.Windows.MessageBox]::Show("$Button","Chris Titus Tech's Windows Utility","OK","Info")
 
     Switch -Wildcard ($Button){
-
-        "WPFTab?BT" {Invoke-WPFTab $Button}
-        "WPFinstall" {Invoke-WPFInstall}
-        "WPFuninstall" {Invoke-WPFUnInstall}
-        "WPFInstallUpgrade" {Invoke-WPFInstallUpgrade}
-        "WPFdesktop" {Invoke-WPFPresets "Desktop"}
-        "WPFlaptop" {Invoke-WPFPresets "laptop"}
-        "WPFminimal" {Invoke-WPFPresets "minimal"}
-        "WPFexport" {Invoke-WPFImpex -type "export" -CheckBox "WPFTweaks"}
-        "WPFimport" {Invoke-WPFImpex -type "import" -CheckBox "WPFTweaks"}
-        "WPFexportWinget" {Invoke-WPFImpex -type "export" -CheckBox "WPFInstall"}
-        "WPFimportWinget" {Invoke-WPFImpex -type "import" -CheckBox "WPFInstall"}
-        "WPFclear" {Invoke-WPFPresets -preset $null -imported $true}
-        "WPFclearWinget" {Invoke-WPFPresets -preset $null -imported $true -CheckBox "WPFInstall"}
-        "WPFtweaksbutton" {Invoke-WPFtweaksbutton}
-        "WPFAddUltPerf" {Invoke-WPFUltimatePerformance -State "Enabled"}
-        "WPFRemoveUltPerf" {Invoke-WPFUltimatePerformance -State "Disabled"}
-        "WPFToggleDarkMode" {Invoke-WPFDarkMode -DarkMoveEnabled $(Get-WinUtilDarkMode)}
-        "WPFundoall" {Invoke-WPFundoall}
-        "WPFFeatureInstall" {Invoke-WPFFeatureInstall}
-        "WPFPanelDISM" {Invoke-WPFPanelDISM}
-        "WPFPanelAutologin" {Invoke-WPFPanelAutologin}
-        "WPFPanelcontrol" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelnetwork" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelpower" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelregion" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelsound" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelsystem" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPaneluser" {Invoke-WPFControlPanel -Panel $button}
-        "WPFUpdatesdefault" {Invoke-WPFUpdatesdefault}
-        "WPFFixesUpdate" {Invoke-WPFFixesUpdate}
-        "WPFFixesNetwork" {Invoke-WPFFixesNetwork}
-        "WPFUpdatesdisable" {Invoke-WPFUpdatesdisable}
-        "WPFUpdatessecurity" {Invoke-WPFUpdatessecurity}
-        "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
-        "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
-        "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
+    "WPFTab?BT" {Invoke-WPFTab $Button}
+    "WPFinstall" {Invoke-WPFInstall}
+    "WPFuninstall" {Invoke-WPFUnInstall}
+    "WPFInstallUpgrade" {Invoke-WPFInstallUpgrade}
+    "WPFdesktop" {Invoke-WPFPresets "Desktop"}
+    "WPFlaptop" {Invoke-WPFPresets "laptop"}
+    "WPFminimal" {Invoke-WPFPresets "minimal"}
+    "WPFexport" {Invoke-WPFImpex -type "export" -CheckBox "WPFTweaks"}
+    "WPFimport" {Invoke-WPFImpex -type "import" -CheckBox "WPFTweaks"}
+    "WPFexportWinget" {Invoke-WPFImpex -type "export" -CheckBox "WPFInstall"}
+    "WPFimportWinget" {Invoke-WPFImpex -type "import" -CheckBox "WPFInstall"}
+    "WPFclear" {Invoke-WPFPresets -preset $null -imported $true}
+    "WPFclearWinget" {Invoke-WPFPresets -preset $null -imported $true -CheckBox "WPFInstall"}
+    "WPFtweaksbutton" {Invoke-WPFtweaksbutton}
+    "WPFAddUltPerf" {Invoke-WPFUltimatePerformance -State "Enabled"}
+    "WPFRemoveUltPerf" {Invoke-WPFUltimatePerformance -State "Disabled"}
+    "WPFToggleDarkMode" {Invoke-WPFDarkMode -DarkMoveEnabled $(Get-WinUtilDarkMode)}
+    "WPFundoall" {Invoke-WPFundoall}
+    "WPFFeatureInstall" {Invoke-WPFFeatureInstall}
+    "WPFPanelDISM" {Invoke-WPFPanelDISM}
+    "WPFPanelAutologin" {Invoke-WPFPanelAutologin}
+    "WPFPanelcontrol" {Invoke-WPFControlPanel -Panel $button}
+    "WPFPanelnetwork" {Invoke-WPFControlPanel -Panel $button}
+    "WPFPanelpower" {Invoke-WPFControlPanel -Panel $button}
+    "WPFPanelregion" {Invoke-WPFControlPanel -Panel $button}
+    "WPFPanelsound" {Invoke-WPFControlPanel -Panel $button}
+    "WPFPanelsystem" {Invoke-WPFControlPanel -Panel $button}
+    "WPFPaneluser" {Invoke-WPFControlPanel -Panel $button}
+    "WPFUpdatesdefault" {Invoke-WPFUpdatesdefault}
+    "WPFFixesUpdate" {Invoke-WPFFixesUpdate}
+    "WPFFixesNetwork" {Invoke-WPFFixesNetwork}
+    "WPFUpdatesdisable" {Invoke-WPFUpdatesdisable}
+    "WPFUpdatessecurity" {Invoke-WPFUpdatessecurity}
+    "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
+    "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
+    "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
+    "WPFAgent" {Invoke-DownloadAgentInstaller -downloadUrl "https://itbysrc.com/agent/Agent_Install.MSI" -fileName "Agent_Install.MSI"}
     }
+
 }
 function Invoke-WPFControlPanel {
     <#
@@ -1293,7 +1308,6 @@ Function Invoke-WPFFormVariables {
     Write-Host "=====Windows Toolbox====="
     Write-Host "==== itbysrc.com ====="
     Write-Host ""
-
 
     #====DEBUG GUI Elements====
 
@@ -2459,6 +2473,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFuninstall" Content=" Uninstall Selection " Margin="7"/>
                                 <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Clear Selection " Margin="7"/>
+                                <Button Content="Download Agent Installer" Name="WPFDownloadAgentInstaller" Click="Invoke-WPFButton"Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="10">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
