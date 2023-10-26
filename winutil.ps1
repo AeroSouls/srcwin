@@ -1309,6 +1309,7 @@ Function Invoke-WPFFormVariables {
     Write-Host "==== itbysrc.com ====="
     Write-Host ""
 
+
     #====DEBUG GUI Elements====
 
     #Write-Host "Found the following interactable elements from our form" -ForegroundColor Cyan
@@ -2549,6 +2550,10 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallventoy" Content="Ventoy" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwinscp" Content="WinSCP" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwireshark" Content="WireShark" Margin="5,0"/>
+
+                                <Label Content="SRC Agent Installer" FontSize="16" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallagent" Content="SRC Agent Universal " Margin="5,0"/>
+
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="4" Margin="10">
                                 <Label Content="Utilities" FontSize="16" Margin="5,0"/>
@@ -3381,6 +3386,10 @@ $sync.configs.applications = '{
     "WPFInstallautorun": {
 	"Winget": "Microsoft.Sysinternals.Autoruns",
 	"choco": "na"
+	},
+	"WPFInstallagent": {
+		"winget": "na",
+		"choco": "src-agent-installer"
 	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",

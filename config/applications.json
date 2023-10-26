@@ -647,6 +647,10 @@
 	"Winget": "Microsoft.Sysinternals.Autoruns",
 	"choco": "na"
 	},
+	"WPFInstallagent": {
+		"winget": "na",
+		"choco": "src-agent-installer"
+	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"
