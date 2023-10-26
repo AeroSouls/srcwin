@@ -3501,7 +3501,7 @@ $sync.configs.themes = '{
     "Classic":  {
                     "ComboBoxBackgroundColor":  "#1a1919",
                     "LabelboxForegroundColor":  "#f7f5f5",
-                    "MainForegroundColor":  "#f7f5f5",
+                    "MainForegroundColor":  "#1fb6db",
                     "MainBackgroundColor":  "#1a1919",
                     "LabelBackgroundColor":  "#1a1919",
                     "ComboBoxForegroundColor":  "#f7f5f5",
@@ -3510,10 +3510,10 @@ $sync.configs.themes = '{
                     "ButtonConfigBackgroundColor":  "#444444",
                     "ButtonUpdatesBackgroundColor":  "#555555",
                     "ButtonInstallForegroundColor":  "#FFFFFF",
-                    "ButtonBackgroundColor":  "#CACACA",
+                    "ButtonBackgroundColor":  "#000000",
                     "ButtonBackgroundPressedColor":  "#FFFFFF",
                     "ButtonBackgroundMouseoverColor":  "AliceBlue",
-                    "ButtonForegroundColor":  "#f7f5f5",
+                    "ButtonForegroundColor":  "#1fb6db",
                     "ButtonBorderThickness":  "0",
                     "ButtonMargin":  "0,3,0,3",
                     "ButtonCornerRadius": "0"
