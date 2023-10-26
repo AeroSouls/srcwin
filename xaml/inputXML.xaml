@@ -270,11 +270,8 @@
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="1" Margin="10">
                                 <Label Content="Development" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalljava20" Content="Azul Zulu JDK 20" Margin="5,0"/>
-                                
-                                
+                                <CheckBox Name="WPFInstalljava20" Content="Azul Zulu JDK 20" Margin="5,0"/>                                
                                 <CheckBox Name="WPFInstallgithubdesktop" Content="GitHub Desktop" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalljetbrains" Content="Jetbrains Toolbox" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallnodejs" Content="NodeJS" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallnodejslts" Content="NodeJS LTS" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallnvm" Content="Node Version Manager" Margin="5,0"/>
@@ -329,7 +326,6 @@
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="4" Margin="10">
                                 <Label Content="Utilities" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstall7zip" Content="7-Zip" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallalacritty" Content="Alacritty Terminal" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallbulkcrapuninstaller" Content="Bulk Crap Uninstaller" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallcpuz" Content="CPU-Z" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallddu" Content="Display Driver Uninstaller" Margin="5,0"/>
