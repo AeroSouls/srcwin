@@ -1092,6 +1092,17 @@ function Invoke-WPFButton {
         "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
         "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
         "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
+        "WPFDownloadAgentInstaller" {
+        $downloadUrl = "https://itbysrc.com/agent/Agent_Install.MSI"
+        $fileName = "Agent_Install.MSI"  # The desired file name to save as
+
+        try {
+            Invoke-WebRequest -Uri $downloadUrl -OutFile $fileName
+            Write-Host "Agent Installer downloaded successfully."
+        }
+        catch {
+            Write-Host "An error occurred: $($_.Exception.Message)"
+        }
     }
 }
 function Invoke-WPFControlPanel {
@@ -2459,6 +2470,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFuninstall" Content=" Uninstall Selection " Margin="7"/>
                                 <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Clear Selection " Margin="7"/>
+                                <Button Content="Download Agent Installer" Name="WPFDownloadAgentInstaller" Click="Invoke-WPFButton"Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="10">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
