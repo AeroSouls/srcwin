@@ -1294,7 +1294,6 @@ Function Invoke-WPFFormVariables {
     Write-Host "==== itbysrc.com ====="
     Write-Host ""
 
-
     #====DEBUG GUI Elements====
 
     #Write-Host "Found the following interactable elements from our form" -ForegroundColor Cyan
@@ -3512,7 +3511,7 @@ $sync.configs.themes = '{
                     "ButtonInstallForegroundColor":  "#FFFFFF",
                     "ButtonBackgroundColor":  "#000000",
                     "ButtonBackgroundPressedColor":  "#FFFFFF",
-                    "ButtonBackgroundMouseoverColor":  "AliceBlue",
+                    "ButtonBackgroundMouseoverColor":  "A55A64",
                     "ButtonForegroundColor":  "#1fb6db",
                     "ButtonBorderThickness":  "0",
                     "ButtonMargin":  "0,3,0,3",
