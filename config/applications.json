@@ -643,10 +643,6 @@
     "winget": "ZeroTier.ZeroTierOne",
     "choco": "zerotier-one"
   },
-    "WPFInstallautorun": {
-	"Winget": "Microsoft.Sysinternals.Autoruns",
-	"choco": "na"
-	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"

@@ -8,7 +8,7 @@
 <#
 .NOTES
     Author         : ZDH
-    Version        : 23.10.25
+    Version        : 23.10.26
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # Variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "23.10.25"
+$sync.version = "23.10.26"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -3369,10 +3369,6 @@ $sync.configs.applications = '{
     "winget": "ZeroTier.ZeroTierOne",
     "choco": "zerotier-one"
   },
-    "WPFInstallautorun": {
-	"Winget": "Microsoft.Sysinternals.Autoruns",
-	"choco": "na"
-	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"
