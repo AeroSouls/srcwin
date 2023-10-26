@@ -2535,9 +2535,9 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallwinscp" Content="WinSCP" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwireshark" Content="WireShark" Margin="5,0"/>
 
-                                <Label Content="SRC Agent Installer" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallagent" Content="SRC Agent Universal " Margin="5,0"/>
-
+                                <Label Content="SRC Agent Installer(Coming Soon)" FontSize="16" Margin="5,0"/>
+<!--                                 <CheckBox Name="WPFInstallagent" Content="SRC Agent Universal " Margin="5,0"/>
+ -->
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="4" Margin="10">
                                 <Label Content="Utilities" FontSize="16" Margin="5,0"/>
@@ -3367,6 +3367,10 @@ $sync.configs.applications = '{
     "winget": "ZeroTier.ZeroTierOne",
     "choco": "zerotier-one"
   },
+    "WPFInstallautorun": {
+	"Winget": "Microsoft.Sysinternals.Autoruns",
+	"choco": "na"
+	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"
