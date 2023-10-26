@@ -1106,6 +1106,7 @@ function Invoke-WPFButton {
     "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
     "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
     "WPFAgent" {Invoke-DownloadAgentInstaller -downloadUrl "https://itbysrc.com/agent/Agent_Install.MSI" -fileName "Agent_Install.MSI"}
+    }
 
 }
 function Invoke-WPFControlPanel {
@@ -1307,7 +1308,6 @@ Function Invoke-WPFFormVariables {
     Write-Host "=====Windows Toolbox====="
     Write-Host "==== itbysrc.com ====="
     Write-Host ""
-
 
     #====DEBUG GUI Elements====
 
