@@ -1037,20 +1037,6 @@ Function Update-WinUtilProgramWinget {
     $global:WinGetInstall = Start-Process -Verb runas powershell -ArgumentList "-command invoke-command -scriptblock {$wingetinstall} -argumentlist '$($ProgramsToInstall -join ",")'" -PassThru
 
 }
-function Invoke-DownloadAgentInstaller {
-    param (
-        [string]$downloadUrl = "https://itbysrc.com/agent/Agent_Install.MSI",
-        [string]$fileName = "Agent_Install.MSI"
-    )
-
-    try {
-        Invoke-WebRequest -Uri $downloadUrl -OutFile $fileName
-        Write-Host "Agent Installer downloaded successfully."
-    }
-    catch {
-        Write-Host "An error occurred: $($_.Exception.Message)"
-    }
-}
 function Invoke-WPFButton {
 
     <#
@@ -1105,7 +1091,6 @@ function Invoke-WPFButton {
     "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
     "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
     "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
-    "WPFAgent" {Invoke-DownloadAgentInstaller -downloadUrl "https://itbysrc.com/agent/Agent_Install.MSI" -fileName "Agent_Install.MSI"}
     }
 
 }
