@@ -1294,7 +1294,6 @@ Function Invoke-WPFFormVariables {
     Write-Host "==== itbysrc.com ====="
     Write-Host ""
 
-
     #====DEBUG GUI Elements====
 
     #Write-Host "Found the following interactable elements from our form" -ForegroundColor Cyan
@@ -2210,9 +2209,7 @@ function Invoke-WPFUpdatessecurity {
         Write-Host "-- Updates Set to Recommended ---"
         Write-Host "================================="
 }
-$inputXML = '
-
-<Window x:Class="WinUtility.MainWindow"
+$inputXML = '<Window x:Class="WinUtility.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
