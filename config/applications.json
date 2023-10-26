@@ -647,6 +647,10 @@
 	"Winget": "Microsoft.Sysinternals.Autoruns",
 	"choco": "na"
 	},
+	"WPFInstallublock": {
+	"Winget": "na",
+	"choco": "ublockorigin-chrome"
+	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"

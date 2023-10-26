@@ -2473,6 +2473,9 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallfirefox" Content="Firefox" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalllibrewolf" Content="LibreWolf" Margin="5,0"/>
 
+                                <Label Content="Browser AD/Malware Block" FontSize="16" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallublock" Content="uBlock Chrome" Margin="5,0"/>
+
 
                                 <Label Content="Communications" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallskype" Content="Skype" Margin="5,0"/>
@@ -3370,6 +3373,10 @@ $sync.configs.applications = '{
     "WPFInstallautorun": {
 	"Winget": "Microsoft.Sysinternals.Autoruns",
 	"choco": "na"
+	},
+	"WPFInstallublock": {
+	"Winget": "na",
+	"choco": "ublockorigin-chrome"
 	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
