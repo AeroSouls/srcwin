@@ -1037,20 +1037,6 @@ Function Update-WinUtilProgramWinget {
     $global:WinGetInstall = Start-Process -Verb runas powershell -ArgumentList "-command invoke-command -scriptblock {$wingetinstall} -argumentlist '$($ProgramsToInstall -join ",")'" -PassThru
 
 }
-function Invoke-DownloadAgentInstaller {
-    param (
-        [string]$downloadUrl = "https://itbysrc.com/agent/Agent_Install.MSI",
-        [string]$fileName = "Agent_Install.MSI"
-    )
-
-    try {
-        Invoke-WebRequest -Uri $downloadUrl -OutFile $fileName
-        Write-Host "Agent Installer downloaded successfully."
-    }
-    catch {
-        Write-Host "An error occurred: $($_.Exception.Message)"
-    }
-}
 function Invoke-WPFButton {
 
     <#
@@ -1105,8 +1091,7 @@ function Invoke-WPFButton {
     "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
     "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
     "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
-    "WPFAgent" {Invoke-DownloadAgentInstaller -downloadUrl "https://itbysrc.com/agent/Agent_Install.MSI" -fileName "Agent_Install.MSI"}
-    }
+   }
 
 }
 function Invoke-WPFControlPanel {
@@ -2225,7 +2210,9 @@ function Invoke-WPFUpdatessecurity {
         Write-Host "-- Updates Set to Recommended ---"
         Write-Host "================================="
 }
-$inputXML = '<Window x:Class="WinUtility.MainWindow"
+$inputXML = '
+
+<Window x:Class="WinUtility.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -2474,7 +2461,6 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFuninstall" Content=" Uninstall Selection " Margin="7"/>
                                 <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Clear Selection " Margin="7"/>
-                                <Button Content="Download Agent Installer" Name="WPFDownloadAgentInstaller" Click="Invoke-WPFButton"Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="10">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
@@ -3387,10 +3373,10 @@ $sync.configs.applications = '{
 	"Winget": "Microsoft.Sysinternals.Autoruns",
 	"choco": "na"
 	},
-	"WPFInstallagent": {
-		"winget": "na",
-		"choco": "src-agent-installer"
-	},
+	// "WPFInstallagent": {
+	// 	"winget": "na",
+	// 	"choco": "src-agent-installer"
+	// },
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"

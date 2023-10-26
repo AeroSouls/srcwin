@@ -52,7 +52,6 @@ function Invoke-WPFButton {
     "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
     "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
     "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
-    "WPFAgent" {Invoke-DownloadAgentInstaller -downloadUrl "https://itbysrc.com/agent/Agent_Install.MSI" -fileName "Agent_Install.MSI"}
-    }
+   }
 
 }
