@@ -6,7 +6,6 @@
     "WPFEssTweaksHome",
     "WPFEssTweaksLoc",
     "WPFEssTweaksOO",
-    "WPFEssTweaksServices",
     "WPFEssTweaksTele",
     "WPFEssTweaksWifi",
     "WPFMiscTweaksPower",
@@ -18,7 +17,6 @@
     "WPFEssTweaksHome",
     "WPFEssTweaksLoc",
     "WPFEssTweaksOO",
-    "WPFEssTweaksServices",
     "WPFEssTweaksTele",
     "WPFEssTweaksWifi",
     "WPFMiscTweaksLapPower",
@@ -27,7 +25,6 @@
   "minimal": [
     "WPFEssTweaksHome",
     "WPFEssTweaksOO",
-    "WPFEssTweaksServices",
     "WPFEssTweaksTele"
   ]
 }
