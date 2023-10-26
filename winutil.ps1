@@ -3499,12 +3499,12 @@ $sync.configs.preset = '{
 }' | convertfrom-json
 $sync.configs.themes = '{
     "Classic":  {
-                    "ComboBoxBackgroundColor":  "#777777",
-                    "LabelboxForegroundColor":  "#000000",
-                    "MainForegroundColor":  "#000000",
-                    "MainBackgroundColor":  "#777777",
-                    "LabelBackgroundColor":  "#777777",
-                    "ComboBoxForegroundColor":  "#000000",
+                    "ComboBoxBackgroundColor":  "#1a1919",
+                    "LabelboxForegroundColor":  "#f7f5f5",
+                    "MainForegroundColor":  "#f7f5f5",
+                    "MainBackgroundColor":  "#1a1919",
+                    "LabelBackgroundColor":  "#1a1919",
+                    "ComboBoxForegroundColor":  "#f7f5f5",
                     "ButtonInstallBackgroundColor":  "#222222",
                     "ButtonTweaksBackgroundColor":  "#333333",
                     "ButtonConfigBackgroundColor":  "#444444",
@@ -3513,7 +3513,7 @@ $sync.configs.themes = '{
                     "ButtonBackgroundColor":  "#CACACA",
                     "ButtonBackgroundPressedColor":  "#FFFFFF",
                     "ButtonBackgroundMouseoverColor":  "AliceBlue",
-                    "ButtonForegroundColor":  "#000000",
+                    "ButtonForegroundColor":  "#f7f5f5",
                     "ButtonBorderThickness":  "0",
                     "ButtonMargin":  "0,3,0,3",
                     "ButtonCornerRadius": "0"
