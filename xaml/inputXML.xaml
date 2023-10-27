@@ -318,7 +318,7 @@
                                 <CheckBox Name="WPFInstallsharex" Content="ShareX (Screenshots)" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallvlc" Content="VLC (Video Player)" Margin="5,0"/>
 
-                                <Label Content="Support Tools" FontSize="16" Margin="5,0"/>
+                                <Label Content="Tech Tools" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalladvancedip" Content="Advanced IP Scanner" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallautorun" Content="Autoruns" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallputty" Content="Putty" Margin="5,0"/>
