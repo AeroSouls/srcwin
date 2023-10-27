@@ -2537,7 +2537,11 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallventoy" Content="Ventoy" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwinscp" Content="WinSCP" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwireshark" Content="WireShark" Margin="5,0"/>
+
+                                <Label Content="Repair/Check Tools" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallcdisk" Content="CrystalDiskInfo" Margin="5,0"/>
+                                <CheckBox Name="WPFInstalllrs" Content="Lazesoft Recovery Suite" Margin="5,0"/>
+
 
                                 <Label Content="SRC Agent Installer(Coming Soon)" FontSize="16" Margin="5,0"/>
 <!--                                 <CheckBox Name="WPFInstallagent" Content="SRC Agent Universal " Margin="5,0"/>
@@ -3382,6 +3386,10 @@ $sync.configs.applications = '{
 	"WPFInstallcdisk": {
 	"Winget": "na",
 	"choco": "crystaldiskinfo"
+	},
+	"WPFInstalllrs": {
+	"Winget": "Lazesoft.LazesoftRecovery",
+	"choco": "na"
 	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
