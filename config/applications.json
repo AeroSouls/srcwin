@@ -651,6 +651,10 @@
 	"Winget": "na",
 	"choco": "ublockorigin-chrome"
 	},
+	"WPFInstallcdisk": {
+	"Winget": "na",
+	"choco": "crystaldiskinfo"
+	},
 	"WPFInstallzoom": {
 		"winget": "Zoom.Zoom",
 		"choco": "zoom"
